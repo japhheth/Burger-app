@@ -6,26 +6,32 @@ import classes from './BurgerIngredients.css'
 class BurgerIngredients extends Component{
     render(){
         let ingredient = null;
-        if(this.props.type === 'bread-bottom'){
-            return ingredient = <div className={classes.BreadBottom}></div>;
-        } else if(this.props.type === 'bread-top'){
-            return  ingredient = (
-                <div className={classes.BreadTop}>
-                    <div className={classes.Seeds1}></div>
-                    <div className={classes.Seeds2}></div>
-                </div>
-            ) 
-        }else if(this.props.type === 'meat'){
-            return ingredient = <div className={classes.Meat}></div>
-        }else if (this.props.type === 'cheese'){
-            return ingredient = <div className={classes.Cheese}></div>
-        }else if(this.props.type === 'salad'){
-            return ingredient = <div className={classes.Salad}></div>
-        }else if(this.props.type === 'bacon'){
-            return ingredient = <div className={classes.Bacon}></div>
-        }else {
-           return ingredient = null
+
+        //Switch case to check the ingredients in that make up the burger
+        switch(this.props.type){
+            case('bread-bottom') : ingredient = <div className={classes.BreadBottom}></div>; 
+            break;
+            case('bread-top') :  ingredient = (
+                                    <div className={classes.BreadTop}>
+                                        <div className={classes.Seeds1}></div>
+                                        <div className={classes.Seeds2}></div>
+                                    </div>
+                                );      
+            break;
+            case('meat') : ingredient = <div className={classes.Meat}></div>;
+            break;
+            case('cheese') : ingredient = <div className={classes.Cheese}></div>;
+            break;
+            case('salad') : ingredient = <div className={classes.Salad}></div>;
+            break;
+            case('bacon') : ingredient = <div className={classes.Bacon}></div>;
+            break;
+            default : ingredient = null;
         }
+        return ingredient;
+    
+ 
+    
     }
      
 }
