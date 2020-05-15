@@ -1,4 +1,4 @@
-.Sidedrawer{
+.SideDrawer {
     position: fixed;
     width: 280px;
     max-width: 70%;
@@ -6,29 +6,27 @@
     left: 0;
     top: 0;
     z-index: 200;
-    background-color: #fff;
+    background-color: white;
     padding: 32px 16px;
     box-sizing: border-box;
-    transition: transform 0.3 ease-out;
+    transition: transform 0.3s ease-out;
 }
 
-
-@media(min-width : 500px){
-    .Sidedrawer{
+@media (min-width: 500px) {
+    .SideDrawer {
         display: none;
     }
 }
 
-.Open{
-    transition: translateX(0);
+.Open {
+    transform: translateX(0);
 }
 
-.Close{
-    transition: translateX(-100%);
+.Close {
+    transform: translateX(-100%);
 }
 
-.Logo{
-    height:11%;
+.Logo {
+    height: 11%;
     margin-bottom: 32px;
 }
-
